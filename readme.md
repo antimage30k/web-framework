@@ -1,8 +1,8 @@
-# 基于Socket和HTTP的Web MVC框架
+# 基于 Socket 和 HTTP 的 Web MVC 框架
 
 **简介**
 -
-- 实现基于socket的web框架，编写函数解析HTTP请求，构建HTTP响应；
+- 实现基于 socket 的 web 框架，编写函数解析HTTP请求，构建HTTP响应；
 - MVC架构，耦合度低、重用度高；
 - 基于MySQL的SQL语句实现了ORM，基于ORM实现了对用户数据的CRUD；
 - 参数化用户输入以避免SQL注入；支持数据库事务，支持join，能解决数据库查询N+1问题；
@@ -45,8 +45,6 @@
 - 您需要在根目录下添加 `secret.py` 文件，内容为：
     ```python
     mysql_password = '您的 MySQL 密码'
-  
-
     ```
 
 - 运行 `db_reset.py`
