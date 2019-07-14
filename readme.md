@@ -34,7 +34,21 @@
 
 
 **依赖**
-
-
+-
+- `Python 3.6`
+- `MySQL`
+- `Jinja2`
+- `PyMySQL`
 
 **如何运行**
+-
+- 您需要在根目录下添加 `secret.py` 文件，内容为：
+    ```python
+    mysql_password = '您的 MySQL 密码'
+  
+
+    ```
+
+- 运行 `db_reset.py`
+
+- 运行 `server.py`
