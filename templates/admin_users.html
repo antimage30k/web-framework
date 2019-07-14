@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员页面</title>
+</head>
+<body>
+    <h2>全部用户</h2>
+    {% for u in users %}
+        <h4>
+            ID：{{ u.id }}&nbsp;&nbsp;用户名：{{ u.username }}&nbsp;&nbsp;加盐密码：{{ u.password }}
+            <a href="/admin/edit/password?id={{ u.id }}">修改密码</a>
+        </h4>
+    {% endfor %}
+    <br>
+    <!--增加一个可以输入提交id和新密码的功能-->
+{#    <form action="/admin/users/update" method="post">#}
+{#        <input type="text" name="id" placeholder="请输入ID">#}
+{#        <br>#}
+{#        <input type="text" name="new_password" placeholder="请输入新密码">#}
+{#        <br>#}
+{#        <button type="submit">点击修改</button>#}
+{#    </form>#}
+</body>
+</html>
