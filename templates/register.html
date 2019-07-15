@@ -7,12 +7,17 @@
 <body>
     <h1>注册</h1>
     <form action="/user/register" method="post">
-        <input type="text" name="username" placeholder="请输入用户名">
+        <input type="text" name="username" id="id-input-username" placeholder="请输入用户名">
+        <button id="id-button-login" type="button">检查用户名</button>
         <br>
         <input type="text" name="password" placeholder="请输入密码">
         <br>
+        <input id="check-username" type="hidden" name="check" value="unchecked" >
         <button type="submit">注册</button>
     </form>
+    <script src="/static?file=check_username.js"></script>
+    <!--添加h3元素并设置id-->
+    <h3 id="id-username-result"></h3>
     <h3>{{result}}</h3>
 </body>
 </html>

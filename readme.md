@@ -21,9 +21,8 @@
 - 防御 `XSS` 攻击
 ![xss-defense.gif](https://i.loli.net/2019/07/14/5d2ac53fec1a536224.gif)
 
-
 - 留言
-![message.gif](https://i.loli.net/2019/07/14/5d2ac5366b54213623.gif)
+![message-ajax.gif](https://i.loli.net/2019/07/16/5d2cbff8e9fcf28504.gif)
 
 - 查看所有评论过的微博
 ![all-comments.gif](https://i.loli.net/2019/07/14/5d2ac535df65c57772.gif)

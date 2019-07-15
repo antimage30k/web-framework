@@ -1,3 +1,4 @@
+import json
 import urllib.parse
 from utils import log
 
@@ -46,6 +47,13 @@ class Request(object):
             f[k] = v
         log('form() 字典', f)
         return f
+
+    def json(self):
+        body = urllib.parse.unquote_plus(self.body)
+        log('before json load', body)
+        data = json.loads(body)
+        log('after json load', data)
+        return data
 
     def parse_path(self, path):
         """

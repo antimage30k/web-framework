@@ -49,9 +49,14 @@ def register(request):
     注册页面的路由函数
     """
     form = request.form()
+    if form['check'] == 'valid':
 
-    u, result = User.register(form)
-    log('register post', result)
+        u, result = User.register(form)
+        log('register post', result)
+    elif form['check'] == 'unchecked':
+        result = '未检查用户名'
+    else:
+        result = '用户名不合法'
 
     return redirect('/user/register/view?result={}'.format(quote(result)))
 

@@ -1,3 +1,4 @@
+import json
 import os.path
 from urllib.parse import quote
 
@@ -114,6 +115,17 @@ def html_response(filename, **kwargs):
     # 下面 3 行可以改写为一条函数, 还把 headers 也放进函数中
     headers = {
         'Content-Type': 'text/html',
+    }
+    header = formatted_header(headers)
+    r = header + '\r\n' + body
+    return r.encode()
+
+
+def json_response(data):
+    body = json.dumps(data, indent=2, ensure_ascii=False)
+    # 下面 3 行可以改写为一条函数, 还把 headers 也放进函数中
+    headers = {
+        'Content-Type': 'application/json',
     }
     header = formatted_header(headers)
     r = header + '\r\n' + body

@@ -5,18 +5,16 @@
         <title>留言板</title>
     </head>
     <body>
-        <div>
-            {% for message in messages %}
-                <div>{{ message.user().username }}说：{{ message.content }}</div>
-            {% endfor %}
+        <div id="id-todo-list">
 
         </div>
-        <form action="/message/add" method="post">
-            <input name="content">
-            <br>
-            <input type="hidden" name="user_id" value="{{ user_id }}">
-            <button type="submit">留言</button>
-        </form>
 
+            <input id="id-input-todo" name="content">
+            <br>
+            <input id="id-author-username" type="hidden" value="{{ username }}">
+            <button id="id-button-add">留言</button>
+
+    <script src="/static?file=ajax.js"></script>
+    <script src="/static?file=message.js"></script>
     </body>
 </html>
