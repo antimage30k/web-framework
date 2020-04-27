@@ -3,3 +3,5 @@
 *.txt
 .pytest_cache
 secret.py
+templates.todo_edit.html
+templates.todo_index.html
